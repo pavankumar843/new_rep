@@ -1,0 +1,142 @@
+I, [2018-06-28T09:24:08.329375 #13723]  INFO -- default-ubuntu-1604: -----> Cleaning up any prior instances of <default-ubuntu-1604>
+I, [2018-06-28T09:24:08.329991 #13723]  INFO -- default-ubuntu-1604: -----> Destroying <default-ubuntu-1604>...
+I, [2018-06-28T09:24:08.419633 #13723]  INFO -- default-ubuntu-1604: UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+I, [2018-06-28T09:24:08.419726 #13723]  INFO -- default-ubuntu-1604: root                13291               13276               0                   09:21               ?                   00:00:00            /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid
+I, [2018-06-28T09:24:08.716960 #13723]  INFO -- default-ubuntu-1604: c1df7f4f5484a268933b56ef139f15537774a99c17a28551f6c0999b2c6e831a
+I, [2018-06-28T09:24:09.085070 #13723]  INFO -- default-ubuntu-1604: c1df7f4f5484a268933b56ef139f15537774a99c17a28551f6c0999b2c6e831a
+I, [2018-06-28T09:24:09.098137 #13723]  INFO -- default-ubuntu-1604: Finished destroying <default-ubuntu-1604> (0m0.77s).
+I, [2018-06-28T09:24:09.098673 #13723]  INFO -- default-ubuntu-1604: -----> Testing <default-ubuntu-1604>
+I, [2018-06-28T09:24:09.098822 #13723]  INFO -- default-ubuntu-1604: -----> Creating <default-ubuntu-1604>...
+I, [2018-06-28T09:24:09.190530 #13723]  INFO -- default-ubuntu-1604: Sending build context to Docker daemon  72.19kB
+I, [2018-06-28T09:24:09.221439 #13723]  INFO -- default-ubuntu-1604: Step 1/17 : FROM ubuntu:16.04
+I, [2018-06-28T09:24:09.221521 #13723]  INFO -- default-ubuntu-1604:  ---> 5e8b97a2a082
+I, [2018-06-28T09:24:09.221547 #13723]  INFO -- default-ubuntu-1604: Step 2/17 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2018-06-28T09:24:09.221565 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.221582 #13723]  INFO -- default-ubuntu-1604:  ---> 1834692ab145
+I, [2018-06-28T09:24:09.221604 #13723]  INFO -- default-ubuntu-1604: Step 3/17 : RUN ln -sf /bin/true /sbin/initctl
+I, [2018-06-28T09:24:09.221621 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.221636 #13723]  INFO -- default-ubuntu-1604:  ---> c32439e532c2
+I, [2018-06-28T09:24:09.221760 #13723]  INFO -- default-ubuntu-1604: Step 4/17 : ENV DEBIAN_FRONTEND noninteractive
+I, [2018-06-28T09:24:09.221778 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.221793 #13723]  INFO -- default-ubuntu-1604:  ---> fd1504e02576
+I, [2018-06-28T09:24:09.221807 #13723]  INFO -- default-ubuntu-1604: Step 5/17 : ENV container docker
+I, [2018-06-28T09:24:09.222307 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.222564 #13723]  INFO -- default-ubuntu-1604:  ---> 1e9dec1a1238
+I, [2018-06-28T09:24:09.222913 #13723]  INFO -- default-ubuntu-1604: Step 6/17 : RUN apt-get update
+I, [2018-06-28T09:24:09.223426 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.223697 #13723]  INFO -- default-ubuntu-1604:  ---> 1d48237a7e44
+I, [2018-06-28T09:24:09.224109 #13723]  INFO -- default-ubuntu-1604: Step 7/17 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2018-06-28T09:24:09.224606 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.224851 #13723]  INFO -- default-ubuntu-1604:  ---> 9c34cd69f085
+I, [2018-06-28T09:24:09.225182 #13723]  INFO -- default-ubuntu-1604: Step 8/17 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-06-28T09:24:09.225677 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.226027 #13723]  INFO -- default-ubuntu-1604:  ---> fc30d760335a
+I, [2018-06-28T09:24:09.226355 #13723]  INFO -- default-ubuntu-1604: Step 9/17 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-06-28T09:24:09.226889 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.227108 #13723]  INFO -- default-ubuntu-1604:  ---> 1ca7d2fc1d79
+I, [2018-06-28T09:24:09.227549 #13723]  INFO -- default-ubuntu-1604: Step 10/17 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-06-28T09:24:09.228077 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.228317 #13723]  INFO -- default-ubuntu-1604:  ---> a34e14284f69
+I, [2018-06-28T09:24:09.228654 #13723]  INFO -- default-ubuntu-1604: Step 11/17 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-06-28T09:24:09.229154 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.229518 #13723]  INFO -- default-ubuntu-1604:  ---> d464f5509217
+I, [2018-06-28T09:24:09.229852 #13723]  INFO -- default-ubuntu-1604: Step 12/17 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-06-28T09:24:09.230235 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.230656 #13723]  INFO -- default-ubuntu-1604:  ---> 663903e6e48f
+I, [2018-06-28T09:24:09.231025 #13723]  INFO -- default-ubuntu-1604: Step 13/17 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-06-28T09:24:09.231323 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.231561 #13723]  INFO -- default-ubuntu-1604:  ---> eb727d20928c
+I, [2018-06-28T09:24:09.231598 #13723]  INFO -- default-ubuntu-1604: Step 14/17 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:24:09.232243 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.232495 #13723]  INFO -- default-ubuntu-1604:  ---> b1c31bcdeecd
+I, [2018-06-28T09:24:09.232996 #13723]  INFO -- default-ubuntu-1604: Step 15/17 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:24:09.233325 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.233559 #13723]  INFO -- default-ubuntu-1604:  ---> cfd141c7ec3e
+I, [2018-06-28T09:24:09.233857 #13723]  INFO -- default-ubuntu-1604: Step 16/17 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:24:09.234352 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.234870 #13723]  INFO -- default-ubuntu-1604:  ---> 94cda5d8b668
+I, [2018-06-28T09:24:09.234906 #13723]  INFO -- default-ubuntu-1604: Step 17/17 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQC6vGHsOx9Jw2jwV\+KRqODoRCFV7biufZCIPVwwhwKf3v7XP2\+oAcerzzJyFReC72pDl8T305u4ksFWvnE1G89JpolTutnFRTquJhnHEWlu7Pab/cLWCscIhMm62aIhJAJJ/GMo4twLvSxRthiT4bYfmmWIpqT4KRgOvjGQFEEWeGUD/eeiGQr489erdS0d8qgpnlecolJZrfUZecnXQmTy3QikKgudpOXcs0/QC\+JsBLU1pEmljZCJPTHmaFJYeFKTw\+olRf7t956gL4Gt4sBTWvKOJRiARgfCvIeypIuGBezQi054nKK1GK4Uf26UTvnYbxTkepGSj2riDUZhAT05\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:24:09.235528 #13723]  INFO -- default-ubuntu-1604:  ---> Using cache
+I, [2018-06-28T09:24:09.235763 #13723]  INFO -- default-ubuntu-1604:  ---> 1a5a2c01737c
+I, [2018-06-28T09:24:09.237330 #13723]  INFO -- default-ubuntu-1604: Successfully built 1a5a2c01737c
+I, [2018-06-28T09:24:09.355237 #13723]  INFO -- default-ubuntu-1604: 8ae365b9703e8d6a54b069a6da374f8d45c9d13017b94ea7b434184c7898177b
+I, [2018-06-28T09:24:09.722591 #13723]  INFO -- default-ubuntu-1604: 0.0.0.0:32773
+I, [2018-06-28T09:24:09.859549 #13723]  INFO -- default-ubuntu-1604: [SSH] Established
+I, [2018-06-28T09:24:09.861074 #13723]  INFO -- default-ubuntu-1604: Finished creating <default-ubuntu-1604> (0m0.76s).
+I, [2018-06-28T09:24:09.861284 #13723]  INFO -- default-ubuntu-1604: -----> Converging <default-ubuntu-1604>...
+I, [2018-06-28T09:24:09.861918 #13723]  INFO -- default-ubuntu-1604: Preparing files for transfer
+I, [2018-06-28T09:24:09.862106 #13723]  INFO -- default-ubuntu-1604: Preparing dna.json
+I, [2018-06-28T09:24:09.862502 #13723]  INFO -- default-ubuntu-1604: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-06-28T09:24:12.028251 #13723]  INFO -- default-ubuntu-1604: Removing non-cookbook files before transfer
+I, [2018-06-28T09:24:12.029509 #13723]  INFO -- default-ubuntu-1604: Preparing validation.pem
+I, [2018-06-28T09:24:12.029770 #13723]  INFO -- default-ubuntu-1604: Preparing client.rb
+I, [2018-06-28T09:24:12.149328 #13723]  INFO -- default-ubuntu-1604: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-06-28T09:24:12.150172 #13723]  INFO -- default-ubuntu-1604: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-06-28T09:24:12.150631 #13723]  INFO -- default-ubuntu-1604: Trying wget...
+I, [2018-06-28T09:24:12.233421 #13723]  INFO -- default-ubuntu-1604: Download complete.
+I, [2018-06-28T09:24:12.245073 #13723]  INFO -- default-ubuntu-1604: ubuntu 16.04 x86_64
+I, [2018-06-28T09:24:12.245566 #13723]  INFO -- default-ubuntu-1604: Getting information for chef stable  for ubuntu...
+I, [2018-06-28T09:24:12.245980 #13723]  INFO -- default-ubuntu-1604: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=ubuntu&pv=16.04&m=x86_64
+I, [2018-06-28T09:24:12.246356 #13723]  INFO -- default-ubuntu-1604:   to file /tmp/install.sh.15/metadata.txt
+I, [2018-06-28T09:24:12.247004 #13723]  INFO -- default-ubuntu-1604: trying wget...
+I, [2018-06-28T09:24:12.299679 #13723]  INFO -- default-ubuntu-1604: sha1	1a907db833e5a2feeab7c79845f5a8ae61f8f555
+I, [2018-06-28T09:24:12.299740 #13723]  INFO -- default-ubuntu-1604: sha256	6832fd71a42c014e78d5f2f9d749b674df78bd4b1e1c28c66d224caf5ca8623d
+I, [2018-06-28T09:24:12.299763 #13723]  INFO -- default-ubuntu-1604: url	https://packages.chef.io/files/stable/chef/14.2.0/ubuntu/16.04/chef_14.2.0-1_amd64.deb
+I, [2018-06-28T09:24:12.300243 #13723]  INFO -- default-ubuntu-1604: version	14.2.0
+I, [2018-06-28T09:24:12.301827 #13723]  INFO -- default-ubuntu-1604: downloaded metadata file looks valid...
+I, [2018-06-28T09:24:12.306466 #13723]  INFO -- default-ubuntu-1604: downloading https://packages.chef.io/files/stable/chef/14.2.0/ubuntu/16.04/chef_14.2.0-1_amd64.deb
+I, [2018-06-28T09:24:12.306863 #13723]  INFO -- default-ubuntu-1604:   to file /tmp/install.sh.15/chef_14.2.0-1_amd64.deb
+I, [2018-06-28T09:24:12.307422 #13723]  INFO -- default-ubuntu-1604: trying wget...
+I, [2018-06-28T09:24:13.297080 #13723]  INFO -- default-ubuntu-1604: Comparing checksum with sha256sum...
+I, [2018-06-28T09:24:13.601302 #13723]  INFO -- default-ubuntu-1604: 
+I, [2018-06-28T09:24:13.602042 #13723]  INFO -- default-ubuntu-1604: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:24:13.602090 #13723]  INFO -- default-ubuntu-1604: 
+I, [2018-06-28T09:24:13.602111 #13723]  INFO -- default-ubuntu-1604: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-06-28T09:24:13.602137 #13723]  INFO -- default-ubuntu-1604: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-06-28T09:24:13.602157 #13723]  INFO -- default-ubuntu-1604: be upgraded without warning on new releases, even to new major releases.
+I, [2018-06-28T09:24:13.602174 #13723]  INFO -- default-ubuntu-1604: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-06-28T09:24:13.602190 #13723]  INFO -- default-ubuntu-1604: CI/CD environments.
+I, [2018-06-28T09:24:13.602204 #13723]  INFO -- default-ubuntu-1604: 
+I, [2018-06-28T09:24:13.602219 #13723]  INFO -- default-ubuntu-1604: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:24:13.602234 #13723]  INFO -- default-ubuntu-1604: 
+I, [2018-06-28T09:24:13.602248 #13723]  INFO -- default-ubuntu-1604: Installing chef 
+I, [2018-06-28T09:24:13.602262 #13723]  INFO -- default-ubuntu-1604: installing with dpkg...
+I, [2018-06-28T09:24:13.635824 #13723]  INFO -- default-ubuntu-1604: Selecting previously unselected package chef.
+I, [2018-06-28T09:24:13.646772 #13723]  INFO -- default-ubuntu-1604: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9646 files and directories currently installed.)
+I, [2018-06-28T09:24:13.647598 #13723]  INFO -- default-ubuntu-1604: Preparing to unpack .../chef_14.2.0-1_amd64.deb ...
+I, [2018-06-28T09:24:13.651221 #13723]  INFO -- default-ubuntu-1604: Unpacking chef (14.2.0-1) ...
+I, [2018-06-28T09:24:18.565975 #13723]  INFO -- default-ubuntu-1604: Setting up chef (14.2.0-1) ...
+I, [2018-06-28T09:24:18.655613 #13723]  INFO -- default-ubuntu-1604: Thank you for installing Chef!
+I, [2018-06-28T09:24:18.740192 #13723]  INFO -- default-ubuntu-1604: Transferring files to <default-ubuntu-1604>
+I, [2018-06-28T09:24:20.195538 #13723]  INFO -- default-ubuntu-1604: Starting Chef Client, version 14.2.0
+I, [2018-06-28T09:24:20.588035 #13723]  INFO -- default-ubuntu-1604: [2018-06-28T09:24:20+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2018-06-28T09:24:20.877102 #13723]  INFO -- default-ubuntu-1604: Creating a new client identity for default-ubuntu-1604 using the validator key.
+I, [2018-06-28T09:24:21.003929 #13723]  INFO -- default-ubuntu-1604: resolving cookbooks for run list: ["my_cookbook::default"]
+I, [2018-06-28T09:24:21.016276 #13723]  INFO -- default-ubuntu-1604: Synchronizing Cookbooks:
+I, [2018-06-28T09:24:21.024167 #13723]  INFO -- default-ubuntu-1604:   - my_cookbook (0.1.0)
+I, [2018-06-28T09:24:21.025101 #13723]  INFO -- default-ubuntu-1604: Installing Cookbook Gems:
+I, [2018-06-28T09:24:21.026766 #13723]  INFO -- default-ubuntu-1604: Compiling Cookbooks...
+I, [2018-06-28T09:24:21.030185 #13723]  INFO -- default-ubuntu-1604: Converging 1 resources
+I, [2018-06-28T09:24:21.031000 #13723]  INFO -- default-ubuntu-1604: Recipe: my_cookbook::default
+I, [2018-06-28T09:24:28.645208 #13723]  INFO -- default-ubuntu-1604:   * apt_package[cowsay] action install
+I, [2018-06-28T09:24:28.646316 #13723]  INFO -- default-ubuntu-1604:     - install version 3.03+dfsg1-15 of package cowsay
+I, [2018-06-28T09:24:28.670831 #13723]  INFO -- default-ubuntu-1604: 
+I, [2018-06-28T09:24:28.671495 #13723]  INFO -- default-ubuntu-1604: Running handlers:
+I, [2018-06-28T09:24:28.671923 #13723]  INFO -- default-ubuntu-1604: Running handlers complete
+I, [2018-06-28T09:24:28.672715 #13723]  INFO -- default-ubuntu-1604: Chef Client finished, 1/1 resources updated in 08 seconds
+I, [2018-06-28T09:24:28.686848 #13723]  INFO -- default-ubuntu-1604: Downloading files from <default-ubuntu-1604>
+I, [2018-06-28T09:24:28.688315 #13723]  INFO -- default-ubuntu-1604: Finished converging <default-ubuntu-1604> (0m18.83s).
+I, [2018-06-28T09:24:28.688395 #13723]  INFO -- default-ubuntu-1604: -----> Setting up <default-ubuntu-1604>...
+I, [2018-06-28T09:24:28.689071 #13723]  INFO -- default-ubuntu-1604: Finished setting up <default-ubuntu-1604> (0m0.00s).
+I, [2018-06-28T09:24:28.689136 #13723]  INFO -- default-ubuntu-1604: -----> Verifying <default-ubuntu-1604>...
+I, [2018-06-28T09:24:29.016119 #13723]  INFO -- default-ubuntu-1604: Loaded tests from {:path=>".home.ec2-user.chef-repo.cookbooks.my_cookbook.test.integration.default"} 
+I, [2018-06-28T09:24:29.458302 #13723]  INFO -- default-ubuntu-1604: Finished verifying <default-ubuntu-1604> (0m0.77s).
+I, [2018-06-28T09:24:29.458898 #13723]  INFO -- default-ubuntu-1604: -----> Destroying <default-ubuntu-1604>...
+I, [2018-06-28T09:24:29.563468 #13723]  INFO -- default-ubuntu-1604: UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+I, [2018-06-28T09:24:29.563561 #13723]  INFO -- default-ubuntu-1604: root                13974               13959               0                   09:24               ?                   00:00:00            /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid
+I, [2018-06-28T09:24:29.563587 #13723]  INFO -- default-ubuntu-1604: root                14030               13974               0                   09:24               ?                   00:00:00            sshd: kitchen@notty
+I, [2018-06-28T09:24:29.563617 #13723]  INFO -- default-ubuntu-1604: root                14634               13974               0                   09:24               ?                   00:00:00            sshd: kitchen@notty
+I, [2018-06-28T09:24:29.829950 #13723]  INFO -- default-ubuntu-1604: 8ae365b9703e8d6a54b069a6da374f8d45c9d13017b94ea7b434184c7898177b
+I, [2018-06-28T09:24:30.424546 #13723]  INFO -- default-ubuntu-1604: 8ae365b9703e8d6a54b069a6da374f8d45c9d13017b94ea7b434184c7898177b
+I, [2018-06-28T09:24:30.437345 #13723]  INFO -- default-ubuntu-1604: Finished destroying <default-ubuntu-1604> (0m0.98s).
+I, [2018-06-28T09:24:30.437938 #13723]  INFO -- default-ubuntu-1604: Finished testing <default-ubuntu-1604> (0m22.11s).

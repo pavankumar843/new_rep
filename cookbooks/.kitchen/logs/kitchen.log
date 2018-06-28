@@ -1,0 +1,29 @@
+I, [2018-06-28T09:40:10.556835 #14816]  INFO -- Kitchen: -----> Starting Kitchen (v1.21.2)
+E, [2018-06-28T09:40:10.557447 #14816] ERROR -- Kitchen: ------Exception-------
+E, [2018-06-28T09:40:10.557479 #14816] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2018-06-28T09:40:10.557495 #14816] ERROR -- Kitchen: Message: Kitchen YAML file /home/ec2-user/chef-repo/cookbooks/.kitchen.yml does not exist.
+E, [2018-06-28T09:40:10.557509 #14816] ERROR -- Kitchen: ----------------------
+E, [2018-06-28T09:40:10.557520 #14816] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-06-28T09:40:10.557531 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/loader/yaml.rb:65:in `read'
+E, [2018-06-28T09:40:10.557543 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/config.rb:152:in `data'
+E, [2018-06-28T09:40:10.557555 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/config.rb:131:in `suites'
+E, [2018-06-28T09:40:10.557566 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/config.rb:182:in `filter_instances'
+E, [2018-06-28T09:40:10.557577 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/config.rb:141:in `build_instances'
+E, [2018-06-28T09:40:10.557589 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/config.rb:117:in `instances'
+E, [2018-06-28T09:40:10.557600 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:112:in `filtered_instances'
+E, [2018-06-28T09:40:10.557612 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:142:in `parse_subcommand'
+E, [2018-06-28T09:40:10.557623 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command/action.rb:35:in `block in call'
+E, [2018-06-28T09:40:10.557634 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:40:10.557645 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command/action.rb:34:in `call'
+E, [2018-06-28T09:40:10.557656 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/cli.rb:52:in `perform'
+E, [2018-06-28T09:40:10.557686 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/cli.rb:193:in `block (2 levels) in <class:CLI>'
+E, [2018-06-28T09:40:10.557698 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/command.rb:27:in `run'
+E, [2018-06-28T09:40:10.557709 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2018-06-28T09:40:10.557721 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor.rb:387:in `dispatch'
+E, [2018-06-28T09:40:10.557732 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/base.rb:466:in `start'
+E, [2018-06-28T09:40:10.557743 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2018-06-28T09:40:10.557755 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2018-06-28T09:40:10.557766 #14816] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/bin/kitchen:13:in `<top (required)>'
+E, [2018-06-28T09:40:10.557777 #14816] ERROR -- Kitchen: /usr/bin/kitchen:270:in `load'
+E, [2018-06-28T09:40:10.557788 #14816] ERROR -- Kitchen: /usr/bin/kitchen:270:in `<main>'
+E, [2018-06-28T09:40:10.557799 #14816] ERROR -- Kitchen: ----End Backtrace-----

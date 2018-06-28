@@ -1,0 +1,9 @@
+{
+	"id" :"admin",
+	"comment": "admin user",
+	"uid" : "1001",
+	"gid" : "0",
+	"home" : "/home/admin",
+	"shell" : "/bin/sh",
+	"password" : "$1$xP1Gp0U2$huws5pmc.6Ugnnvbj9Y.c0"
+}

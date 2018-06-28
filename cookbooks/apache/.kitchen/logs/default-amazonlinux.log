@@ -1,0 +1,27 @@
+I, [2018-06-28T09:44:46.040093 #14864]  INFO -- default-amazonlinux: -----> Creating <default-amazonlinux>...
+E, [2018-06-28T09:44:46.040299 #14864] ERROR -- default-amazonlinux: Create failed on instance <default-amazonlinux>.
+E, [2018-06-28T09:44:46.040376 #14864] ERROR -- default-amazonlinux: ------Exception-------
+E, [2018-06-28T09:44:46.040395 #14864] ERROR -- default-amazonlinux: Class: Kitchen::ActionFailed
+E, [2018-06-28T09:44:46.040408 #14864] ERROR -- default-amazonlinux: Message: Unknown platform 'amazonlinux'
+E, [2018-06-28T09:44:46.040419 #14864] ERROR -- default-amazonlinux: ----------------------
+E, [2018-06-28T09:44:46.040429 #14864] ERROR -- default-amazonlinux: ------Backtrace-------
+E, [2018-06-28T09:44:46.040440 #14864] ERROR -- default-amazonlinux: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:249:in `build_dockerfile'
+E, [2018-06-28T09:44:46.040451 #14864] ERROR -- default-amazonlinux: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:285:in `dockerfile'
+E, [2018-06-28T09:44:46.040462 #14864] ERROR -- default-amazonlinux: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:304:in `build_image'
+E, [2018-06-28T09:44:46.040473 #14864] ERROR -- default-amazonlinux: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2018-06-28T09:44:46.040483 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `public_send'
+E, [2018-06-28T09:44:46.040494 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `block in perform_action'
+E, [2018-06-28T09:44:46.040505 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:44:46.040516 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:44:46.040526 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:44:46.040537 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:44:46.040547 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `perform_action'
+E, [2018-06-28T09:44:46.040558 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:379:in `create_action'
+E, [2018-06-28T09:44:46.040569 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:44:46.040579 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:44:46.040590 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:44:46.040601 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:44:46.040611 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:44:46.040622 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:44:46.040632 #14864] ERROR -- default-amazonlinux: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:44:46.040649 #14864] ERROR -- default-amazonlinux: ----End Backtrace-----

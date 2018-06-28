@@ -1,0 +1,77 @@
+I, [2018-06-28T09:43:41.850504 #14864]  INFO -- Kitchen: -----> Starting Kitchen (v1.21.2)
+I, [2018-06-28T09:43:43.868193 #14864]  INFO -- Kitchen: -----> Creating <default-ubuntu-1204>...
+I, [2018-06-28T09:44:14.963889 #14864]  INFO -- Kitchen: -----> Converging <default-ubuntu-1204>...
+I, [2018-06-28T09:44:46.039809 #14864]  INFO -- Kitchen: -----> Creating <default-amazonlinux>...
+E, [2018-06-28T09:44:46.041115 #14864] ERROR -- Kitchen: ------Exception-------
+E, [2018-06-28T09:44:46.041146 #14864] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2018-06-28T09:44:46.041163 #14864] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Create failed on instance <default-amazonlinux>.  Please see .kitchen/logs/default-amazonlinux.log for more details
+E, [2018-06-28T09:44:46.041178 #14864] ERROR -- Kitchen: ----------------------
+E, [2018-06-28T09:44:46.041191 #14864] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-06-28T09:44:46.041204 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:183:in `report_errors'
+E, [2018-06-28T09:44:46.041217 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:174:in `run_action'
+E, [2018-06-28T09:44:46.041231 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command/action.rb:36:in `block in call'
+E, [2018-06-28T09:44:46.041244 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:44:46.041257 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command/action.rb:34:in `call'
+E, [2018-06-28T09:44:46.041271 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/cli.rb:52:in `perform'
+E, [2018-06-28T09:44:46.041285 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/cli.rb:193:in `block (2 levels) in <class:CLI>'
+E, [2018-06-28T09:44:46.041298 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/command.rb:27:in `run'
+E, [2018-06-28T09:44:46.041311 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2018-06-28T09:44:46.041324 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor.rb:387:in `dispatch'
+E, [2018-06-28T09:44:46.041337 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/base.rb:466:in `start'
+E, [2018-06-28T09:44:46.041350 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2018-06-28T09:44:46.041364 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2018-06-28T09:44:46.041377 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/bin/kitchen:13:in `<top (required)>'
+E, [2018-06-28T09:44:46.041391 #14864] ERROR -- Kitchen: /usr/bin/kitchen:270:in `load'
+E, [2018-06-28T09:44:46.041403 #14864] ERROR -- Kitchen: /usr/bin/kitchen:270:in `<main>'
+E, [2018-06-28T09:44:46.041416 #14864] ERROR -- Kitchen: ----End Backtrace-----
+E, [2018-06-28T09:44:46.041428 #14864] ERROR -- Kitchen: -Composite Exception--
+E, [2018-06-28T09:44:46.041440 #14864] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
+E, [2018-06-28T09:44:46.041452 #14864] ERROR -- Kitchen: Message: Create failed on instance <default-amazonlinux>.  Please see .kitchen/logs/default-amazonlinux.log for more details
+E, [2018-06-28T09:44:46.041466 #14864] ERROR -- Kitchen: ----------------------
+E, [2018-06-28T09:44:46.041478 #14864] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-06-28T09:44:46.041490 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:249:in `build_dockerfile'
+E, [2018-06-28T09:44:46.041510 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:285:in `dockerfile'
+E, [2018-06-28T09:44:46.041525 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:304:in `build_image'
+E, [2018-06-28T09:44:46.041538 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2018-06-28T09:44:46.041550 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `public_send'
+E, [2018-06-28T09:44:46.041563 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `block in perform_action'
+E, [2018-06-28T09:44:46.041576 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:44:46.041589 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:44:46.041602 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:44:46.041615 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:44:46.041628 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `perform_action'
+E, [2018-06-28T09:44:46.041641 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:379:in `create_action'
+E, [2018-06-28T09:44:46.041653 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:44:46.041666 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:44:46.041679 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:44:46.041692 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:44:46.041706 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:44:46.041718 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:44:46.041732 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:44:46.041755 #14864] ERROR -- Kitchen: ----End Backtrace-----
+E, [2018-06-28T09:44:46.041768 #14864] ERROR -- Kitchen: ---Nested Exception---
+E, [2018-06-28T09:44:46.041780 #14864] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2018-06-28T09:44:46.041793 #14864] ERROR -- Kitchen: Message: Unknown platform 'amazonlinux'
+E, [2018-06-28T09:44:46.041805 #14864] ERROR -- Kitchen: ----------------------
+E, [2018-06-28T09:44:46.041817 #14864] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-06-28T09:44:46.041829 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:249:in `build_dockerfile'
+E, [2018-06-28T09:44:46.041842 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:285:in `dockerfile'
+E, [2018-06-28T09:44:46.041855 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:304:in `build_image'
+E, [2018-06-28T09:44:46.041868 #14864] ERROR -- Kitchen: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2018-06-28T09:44:46.041884 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `public_send'
+E, [2018-06-28T09:44:46.041898 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `block in perform_action'
+E, [2018-06-28T09:44:46.041911 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:44:46.041924 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:44:46.041937 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:44:46.041949 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:44:46.041963 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `perform_action'
+E, [2018-06-28T09:44:46.041975 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:379:in `create_action'
+E, [2018-06-28T09:44:46.041988 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:44:46.042001 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:44:46.042014 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:44:46.042027 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:44:46.042041 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:44:46.042053 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:44:46.042066 #14864] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:44:46.042079 #14864] ERROR -- Kitchen: ----End Backtrace-----
