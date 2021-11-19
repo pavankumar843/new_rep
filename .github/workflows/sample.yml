@@ -1,0 +1,12 @@
+name: shell commands
+on: [push]
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "testing the string"
+      - name:
+         run: |
+           node -v
+           npm -v
