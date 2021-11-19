@@ -11,3 +11,4 @@ jobs:
            node -v
            npm -v
            echo "Testing the second workflow"
+           echo "some file content" > test.log
